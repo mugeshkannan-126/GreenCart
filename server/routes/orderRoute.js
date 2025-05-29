@@ -6,7 +6,7 @@ import authSeller from "../middlewares/authSeller.js";
 const orderRouter = express.Router();
 
 orderRouter.post("/cod" , authUser , placeOrderCOD);
-orderRouter.post("/stripe" , authUser , placeOrderStripe);
+orderRouter.post("/stripe" , placeOrderStripe);
 orderRouter.get("/user" , authUser , getUserOrder);
 orderRouter.get("/seller" , authSeller , getAllOrders);
 
